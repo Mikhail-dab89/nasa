@@ -1,0 +1,231 @@
+@font-face {
+    font-family : 'icomoon';
+    src         : url('../fonts/icomoon.woff?fe0c80') format('woff');
+    font-weight : normal;
+    font-style  : normal;
+    font-display: block;
+}
+
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin    : 0;
+    padding   : 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size  : 16px;
+}
+
+.container {
+    width  : 1140px;
+    margin : 0 auto;
+    padding: 0 20px;
+}
+
+.starter {
+    height          : 100vh;
+    background-color: #020312;
+    background-image: url(../img/bg-hero.jpg);
+    background-size : cover;
+}
+
+.starter__container {
+    display    : flex;
+    align-items: center;
+    position   : relative;
+    height     : 100%;
+}
+
+.starter__title {
+    font-size    : 56px;
+    color        : #ffffff;
+    margin-bottom: 30px;
+}
+
+.starter__prof {
+    color      : #ffffff;
+    font-size  : 56px;
+    border     : 3px solid #fff;
+    display    : inline-block;
+    padding    : 25px;
+    line-height: 1;
+    position   : relative;
+}
+
+.starter__prof::before {
+    content    : "";
+    width      : 15px;
+    height     : 15px;
+    position   : absolute;
+    top        : 100%;
+    left       : 30px;
+    border     : 7.5px solid transparent;
+    border-top : 7.5px solid #fff;
+    border-left: 7.5px solid #fff;
+}
+
+.starter__social {
+    margin-bottom: 30px;
+}
+
+.starter__btn {
+    position        : absolute;
+    bottom          : 30px;
+    left            : 20px;
+    background-color: transparent;
+    border          : 0;
+    outline         : none;
+    width           : 75px;
+    height          : 75px;
+    display         : flex;
+    justify-content : flex-end;
+    overflow        : hidden;
+}
+
+.starter__btn::before,
+.starter__btn::after {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    font-family    : icomoon;
+    content        : "\e904";
+    width          : 100%;
+    height         : 100%;
+    min-width      : 100%;
+    min-height     : 100%;
+    transition     : transform 0.2s linear;
+    color          : #fff;
+    font-size      : 18px;
+}
+
+.starter__btn::after {
+    background-color: #f26c4f;
+}
+
+.starter__btn:hover::before,
+.starter__btn:hover::after {
+    transform: translateX(100%)
+}
+
+.header {
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    width           : 100%;
+    height          : 53px;
+    background-color: #fff;
+}
+
+.header__container {
+    display        : flex;
+    justify-content: flex-end;
+    position       : relative;
+}
+
+.logo {
+    position        : absolute;
+    top             : 22px;
+    left            : 20px;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    width           : 64px;
+    height          : 64px;
+    text-transform  : uppercase;
+    background-color: #f26c4f;
+    font-size       : 24px;
+    color           : #ffffff;
+    line-height     : 1;
+}
+
+.nav {}
+
+.nav__list {
+    display: flex;
+}
+
+.nav__item {
+    list-style: none;
+}
+
+.nav__link {
+    text-decoration    : none;
+    font-weight        : 500;
+    font-size          : 13px;
+    color              : rgba(0, 0, 0, 0.6);
+    transition-property: color;
+    transition-duration: 0.3s;
+    height             : 53px;
+    display            : flex;
+    align-items        : center;
+    padding            : 0px 7px;
+}
+
+.nav__link--active {
+    color   : rgba(0, 0, 0, 0.9);
+    position: relative;
+}
+
+.nav__link--active::before {
+    content         : "";
+    width           : 100%;
+    height          : 3px;
+    background-color: #f26c4f;
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+}
+
+.nav__link:hover {
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.social {}
+
+.social__list {
+    display: flex;
+}
+
+.social__item {
+    list-style: none;
+}
+
+.social__item {
+    margin-right: 25px;
+}
+
+.social__link {
+    text-decoration: none;
+}
+
+.social__link::before {
+    font-family: icomoon;
+    color      : #aeaeae;
+    font-size  : 20px;
+}
+
+.social__link--facebook::before {
+    content: "\e900";
+}
+
+.social__link--twitter::before {
+    content: "\e903";
+}
+
+.social__link--pinterest::before {
+    content: "\e902";
+}
+
+.social__link--vk::before {
+    content: "\e905";
+}
+
+.social__link--insta::before {
+    content: "\e901";
+}
