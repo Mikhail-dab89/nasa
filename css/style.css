@@ -28,6 +28,39 @@ body {
     padding: 0 20px;
 }
 
+/* icons */
+
+.icon-design::before {
+    font-family: icomoon;
+    content    : "\e909";
+}
+
+.icon-photo::before {
+    font-family: icomoon;
+    content    : "\e900";
+}
+
+.icon-video::before {
+    font-family: icomoon;
+    content    : "\e907";
+}
+
+.icon-pencil::before {
+    font-family: icomoon;
+    content    : "\e904";
+}
+
+.icon-code::before {
+    font-family: icomoon;
+    content    : "\e90a";
+}
+
+.icon-app::before {
+    font-family: icomoon;
+    content    : "\e909";
+}
+
+/* starter section styling */
 .starter {
     height          : 100vh;
     background-color: #020312;
@@ -86,6 +119,7 @@ body {
     display         : flex;
     justify-content : flex-end;
     overflow        : hidden;
+    cursor          : pointer;
 }
 
 .starter__btn::before,
@@ -113,6 +147,7 @@ body {
     transform: translateX(100%)
 }
 
+/* header section styling */
 .header {
     position        : fixed;
     top             : 0;
@@ -120,6 +155,7 @@ body {
     width           : 100%;
     height          : 53px;
     background-color: #fff;
+    z-index         : 999;
 }
 
 .header__container {
@@ -128,6 +164,7 @@ body {
     position       : relative;
 }
 
+/* logo block styling */
 .logo {
     position        : absolute;
     top             : 22px;
@@ -144,6 +181,7 @@ body {
     line-height     : 1;
 }
 
+/* nav block styling */
 .nav {}
 
 .nav__list {
@@ -186,6 +224,7 @@ body {
     color: rgba(0, 0, 0, 0.9);
 }
 
+/* social block styling */
 .social {}
 
 .social__list {
@@ -211,21 +250,135 @@ body {
 }
 
 .social__link--facebook::before {
-    content: "\e900";
+    content: "\e901";
 }
 
 .social__link--twitter::before {
-    content: "\e903";
+    content: "\e906";
 }
 
 .social__link--pinterest::before {
-    content: "\e902";
-}
-
-.social__link--vk::before {
     content: "\e905";
 }
 
+.social__link--vk::before {
+    content: "\e908";
+}
+
 .social__link--insta::before {
-    content: "\e901";
+    content: "\e902";
+}
+
+/* title block styling */
+.title {
+    color         : #fff;
+    font-size     : 34px;
+    text-transform: capitalize;
+    font-weight   : 400;
+    text-align    : center;
+}
+
+/* services section styling */
+.services {
+    background-color: #020312;
+    padding         : 100px 0;
+}
+
+.services__content {
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: space-between;
+}
+
+.services__card {
+    width     : calc(33% - 20px);
+    margin-top: 90px;
+}
+
+.services__card:hover .services__icon,
+.services__card:hover .services__subtitle,
+.services__card:hover .services__text {
+    transform: translateY(-10px);
+
+}
+
+.services__card:hover .services__button {
+    width           : 100px;
+    transition-delay: 0s;
+}
+
+.services__card:hover .services__button::after {
+    transform       : translateX(0);
+    transition-delay: 0.1s;
+}
+
+.services__icon {
+    display: block;
+    color      : #f75;
+    font-size  : 54px;
+    line-height: 1;
+    transition: transform 0.3s;
+}
+
+.services__subtitle {
+    color         : #fff;
+    font-size     : 24px;
+    font-weight   : 400;
+    margin        : 26px 0;
+    text-transform: capitalize;
+    transition: transform 0.3s 0.05s;
+
+}
+
+.services__text {
+    color        : #888;
+    font-weight  : 500;
+    margin-bottom: 20px;
+    transition: transform 0.3s 0.1s;
+
+}
+
+.services__button {
+    background      : none;
+    border          : none;
+    color           : #fff;
+    outline         : none;
+    cursor          : pointer;
+    position        : relative;
+    width           : 30px;
+    background-color: #020312;
+    overflow        : hidden;
+    height          : 20px;
+    transition      : all 0.3s ease 0.1s;
+}
+
+.services__button::before {
+    position        : absolute;
+    top             : 50%;
+    left            : 0;
+    height          : 3px;
+    background-color: #f75;
+    width           : 100%;
+    content         : "";
+    transform       : translateY(-50%);
+}
+
+.services__button::after {
+    content         : "read more";
+    text-transform  : uppercase;
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+    transform       : translateY(-50%);
+    background-color: #020312;
+    padding         : 0 5px;
+    font-size       : 11px;
+    font-weight     : 700;
+    font-family     : inherit;
+    white-space     : nowrap;
+    transform       : translateX(-100%);
+    transition      : all 0.3s ease;
+    height          : 100%;
+    display         : flex;
+    align-items     : center;
 }
