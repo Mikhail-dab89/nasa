@@ -60,6 +60,44 @@ body {
     content    : "\e909";
 }
 
+.icon-right::after {
+    font-family: icomoon;
+    content    : "\ea3c";
+}
+
+.icon-down::before {
+    font-family: icomoon;
+    content    : "\ea3e";
+}
+
+.icon-download::before {
+    font-family: icomoon;
+    content    : "\e9c5";
+}
+
+/* type block styling */
+.type {
+    color      : #ffffff;
+    font-size  : 56px;
+    border     : 3px solid #fff;
+    display    : inline-block;
+    padding    : 0.5em;
+    line-height: 1;
+    position   : relative;
+}
+
+.type::before {
+    content    : "";
+    width      : 15px;
+    height     : 15px;
+    position   : absolute;
+    top        : 100%;
+    left       : 30px;
+    border     : 7.5px solid transparent;
+    border-top : 7.5px solid #fff;
+    border-left: 7.5px solid #fff;
+}
+
 /* starter section styling */
 .starter {
     height          : 100vh;
@@ -81,71 +119,16 @@ body {
     margin-bottom: 30px;
 }
 
-.starter__prof {
-    color      : #ffffff;
-    font-size  : 56px;
-    border     : 3px solid #fff;
-    display    : inline-block;
-    padding    : 25px;
-    line-height: 1;
-    position   : relative;
-}
-
-.starter__prof::before {
-    content    : "";
-    width      : 15px;
-    height     : 15px;
-    position   : absolute;
-    top        : 100%;
-    left       : 30px;
-    border     : 7.5px solid transparent;
-    border-top : 7.5px solid #fff;
-    border-left: 7.5px solid #fff;
-}
-
 .starter__social {
     margin-bottom: 30px;
 }
 
-.starter__btn {
-    position        : absolute;
-    bottom          : 30px;
-    left            : 20px;
-    background-color: transparent;
-    border          : 0;
-    outline         : none;
-    width           : 75px;
-    height          : 75px;
-    display         : flex;
-    justify-content : flex-end;
-    overflow        : hidden;
-    cursor          : pointer;
+.starter__button {
+    position: absolute;
+    bottom  : 30px;
+    left    : 20px;
 }
 
-.starter__btn::before,
-.starter__btn::after {
-    display        : flex;
-    justify-content: center;
-    align-items    : center;
-    font-family    : icomoon;
-    content        : "\e904";
-    width          : 100%;
-    height         : 100%;
-    min-width      : 100%;
-    min-height     : 100%;
-    transition     : transform 0.2s linear;
-    color          : #fff;
-    font-size      : 18px;
-}
-
-.starter__btn::after {
-    background-color: #f26c4f;
-}
-
-.starter__btn:hover::before,
-.starter__btn:hover::after {
-    transform: translateX(100%)
-}
 
 /* header section styling */
 .header {
@@ -278,6 +261,14 @@ body {
     text-align    : center;
 }
 
+/* text block styling */
+.text {
+    color        : #888;
+    font-weight  : 500;
+    margin-bottom: 20px;
+    transition   : transform 0.3s 0.1s;
+}
+
 /* services section styling */
 .services {
     background-color: #020312;
@@ -313,11 +304,11 @@ body {
 }
 
 .services__icon {
-    display: block;
+    display    : block;
     color      : #f75;
     font-size  : 54px;
     line-height: 1;
-    transition: transform 0.3s;
+    transition : transform 0.3s;
 }
 
 .services__subtitle {
@@ -326,15 +317,7 @@ body {
     font-weight   : 400;
     margin        : 26px 0;
     text-transform: capitalize;
-    transition: transform 0.3s 0.05s;
-
-}
-
-.services__text {
-    color        : #888;
-    font-weight  : 500;
-    margin-bottom: 20px;
-    transition: transform 0.3s 0.1s;
+    transition    : transform 0.3s 0.05s;
 
 }
 
@@ -381,4 +364,205 @@ body {
     height          : 100%;
     display         : flex;
     align-items     : center;
+}
+
+.about {
+    background-color: #020312;
+    padding         : 100px 0;
+}
+
+.about__content {
+    color     : #fff;
+    display   : flex;
+    margin-top: 100px;
+}
+
+.about__column {
+    width: 50%;
+}
+
+.about__img {
+    display: flex;
+    width  : 75%;
+}
+
+.about__type {
+    font-size     : 24px;
+    text-transform: capitalize;
+    padding       : 1em;
+}
+
+.about__text {
+    margin: 30px 0;
+}
+
+.about__contacts {
+    display      : flex;
+    flex-wrap    : wrap;
+    border-bottom: 1px solid #333;
+    margin-bottom: 30px;
+}
+
+
+.about__contact {
+    text-transform: capitalize;
+    font-weight   : 600;
+    width         : 50%;
+    margin-bottom : 20px;
+}
+
+.about__contact span {
+    color: #f75;
+}
+
+.about__buttons {
+    display: flex;
+}
+
+.about__buttons button {
+    margin-right: 20px;
+}
+
+/* button block styling */
+.button {
+    background     : none;
+    border         : none;
+    outline        : none;
+    height         : 50px;
+    color          : #fff;
+    width          : 150px;
+    display        : flex;
+    justify-content: flex-end;
+    overflow       : hidden;
+    cursor         : pointer;
+}
+
+.button:hover span {
+    transform: translateX(100%);
+}
+
+.button span {
+    display        : flex;
+    min-width      : 100%;
+    height         : 100%;
+    justify-content: center;
+    align-items    : center;
+    text-transform : uppercase;
+    transition     : transform 0.3s;
+    font-weight    : 600;
+    font-size      : 12px;
+}
+
+.button span::after {
+    margin-left: 10px;
+    font-size  : 10px;
+}
+
+.button span::before {
+    margin-right: 10px;
+    font-size   : 10px;
+}
+
+.button span:first-child {
+    background-color: rgb(212, 71, 41);
+}
+
+.button span:last-child {
+    background-color: #f75;
+}
+
+.button--outline span:first-child {
+    background-color: #fff;
+    color           : #333;
+}
+
+.button--outline span:last-child {
+    background-color: transparent;
+    border          : 2px solid #fff;
+}
+
+.button--square {
+    width : 75px;
+    height: 75px;
+
+}
+
+.button--square span::after {
+    margin-left: 0px;
+    font-size  : 16px;
+}
+
+.button--square span::before {
+    margin-right: 0px;
+    font-size   : 16px;
+}
+
+.button--square span:first-child {
+    background-color: transparent;
+}
+
+.button--square span:last-child {
+    background-color: #f75;
+}
+
+/* hero section styling */
+.hero {
+    background-color: #020312;
+    padding         : 80px 0 180px;
+}
+
+.hero__container {
+    height             : 160px;
+    display            : flex;
+    justify-content    : center;
+    align-items        : center;
+    position           : relative;
+    background-image   : url("../img/bg-keyboard.jpg");
+    background-position: center center;
+    background-size    : cover;
+}
+
+.hero__container::before {
+    content         : "";
+    width           : 100%;
+    height          : 100%;
+    position        : absolute;
+    left            : 0;
+    top             : 0;
+    background-color: rgba(2, 3, 18, 0.8);
+}
+
+.hero__text {
+    color     : #fff;
+    text-align: center;
+    font-size : 30px;
+    position  : relative;
+}
+
+.hero__link {
+    background-color: #f75;
+    color           : #fff;
+    padding         : 1em;
+    text-decoration : none;
+    text-transform  : uppercase;
+    font-size       : 14px;
+    display         : inline-block;
+    font-weight     : 600;
+    position        : absolute;
+    bottom          : 0;
+    left            : 50%;
+    transform       : translate(-50%, 50%);
+}
+
+.hero__link::before {
+    content    : "";
+    width      : 12px;
+    height     : 12px;
+    position   : absolute;
+    top        : 100%;
+    left       : 20px;
+    border     : 6px solid transparent;
+    border-top : 6px solid #f75;
+    border-left: 6px solid #f75;
+    transform  : translateY(-3px);
 }
