@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -15,6 +16,11 @@
         <header class="header">
             <div class="header__container container">
                 <div class="logo">s.</div>
+                <div class="burger">
+                    <div class="burger__item"></div>
+                    <div class="burger__item"></div>
+                    <div class="burger__item"></div>
+                </div>
                 <nav class="nav">
                     <ul class="nav__list">
                         <li class="nav__item">
@@ -30,7 +36,7 @@
                             <a href="#skills" class="nav__link">SKILLS</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">PORTFOLIO</a>
+                            <a href="#portfolio" class="nav__link">PORTFOLIO</a>
                         </li>
                         <li class="nav__item">
                             <a href="#" class="nav__link">CLIENTS</a>
@@ -64,12 +70,12 @@
                     </ul>
                 </nav>
                 <div class="starter__title">I am Jonathan Doe</div>
-                <div class="type">Creative person</div>
+                <div class="starter__type type">Creative person</div>
             </div>
-            <button class="starter__button button button--square">
+            <a class="starter__button button button--square" href="#services">
                 <span class="icon-down"></span>
                 <span class="icon-down"></span>
-            </button>
+            </a>
         </div>
     </section>
 
@@ -221,6 +227,139 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio section" id="portfolio">
+        <div class="container">
+            <h2 class="portfolio__title title"">portfolio</h2>
+            <div class=" portfolio__content">
+
+                <div class="portfolio__column">
+
+                    <div class="portfolio__card">
+                        <img src="img/img-work-01.png" alt="pehaz" class="portfolio__card-img">
+                        <div class="portfolio__card-content">
+                            <span class="text">Branding</span>
+                            <h3>pehaz</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__card">
+                        <img src="img/img-work-02.png" alt="pehaz" class="portfolio__card-img">
+                        <div class="portfolio__card-content">
+                            <span class="text">Branding</span>
+                            <h3>pehaz</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__card">
+                        <img src="img/img-work-03.png" alt="pehaz" class="portfolio__card-img">
+                        <div class="portfolio__card-content">
+                            <span class="text">Branding</span>
+                            <h3>pehaz</h3>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="portfolio__column">
+
+                    <div class="portfolio__card">
+                        <img src="img/img-work-04.png" alt="pehaz" class="portfolio__card-img">
+                        <div class="portfolio__card-content">
+                            <span class="text">Branding</span>
+                            <h3>pehaz</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__card">
+                        <img src="img/img-work-05.png" alt="pehaz" class="portfolio__card-img">
+                        <div class="portfolio__card-content">
+                            <span class="text">Branding</span>
+                            <h3>pehaz</h3>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="portfolio__column">
+
+                    <div class="portfolio__card">
+                        <img src="img/img-work-06.png" alt="pehaz" class="portfolio__card-img">
+                        <div class="portfolio__card-content">
+                            <span class="text">Branding</span>
+                            <h3>pehaz</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__card">
+                        <img src="img/img-work-07.png" alt="pehaz" class="portfolio__card-img">
+                        <div class="portfolio__card-content">
+                            <span class="text">Branding</span>
+                            <h3>pehaz</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__card">
+                        <img src="img/img-work-08.png" alt="pehaz" class="portfolio__card-img">
+                        <div class="portfolio__card-content">
+                            <span class="text">Branding</span>
+                            <h3>pehaz</h3>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="portfolio__column">
+
+                    <div class="portfolio__card">
+                        <img src="img/img-work-10.png" alt="pehaz" class="portfolio__card-img">
+                        <div class="portfolio__card-content">
+                            <span class="text">Branding</span>
+                            <h3>pehaz</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__card">
+                        <img src="img/img-work-11.png" alt="pehaz" class="portfolio__card-img">
+                        <div class="portfolio__card-content">
+                            <span class="text">Branding</span>
+                            <h3>pehaz</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__card">
+                        <img src="img/img-work-09.png" alt="pehaz" class="portfolio__card-img">
+                        <div class="portfolio__card-content">
+                            <span class="text">Branding</span>
+                            <h3>pehaz</h3>
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="statistic section">
+        <div class="statistic__container container">
+            <div class="statistic__item">
+                <div class="statistic__num">34</div>
+                <div class="statistic__text">Clients</div>
+            </div>
+            <div class="statistic__item">
+                <div class="statistic__num">45</div>
+                <div class="statistic__text">Projects</div>
+            </div>
+            <div class="statistic__item">
+                <div class="statistic__num">67</div>
+                <div class="statistic__text">Awards</div>
+            </div>
+            <div class="statistic__item">
+                <div class="statistic__num">89</div>
+                <div class="statistic__text">Years Experience</div>
             </div>
         </div>
     </section>
