@@ -28,3 +28,17 @@ window.addEventListener('DOMContentLoaded', function () {
         body.classList.remove('lock');
     }
 });
+
+// owl carousel script
+$('.testimonials__carousel').owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeOut: 2000,
+    autoplayHoverPause: true,
+    items: 1,
+    responsive: {
+        0: {
+            items: 1
+        }
+    }
+});
